@@ -3,6 +3,8 @@ import sys
 
 from gradebook.errors import GradebookError
 from gradebook.storage import load
+from gradebook.reports import mean
+from gradebook.reports import summary
 
 DATA_FILE = "roster.json"
 
@@ -14,6 +16,7 @@ def show_help(roster, args):
 COMMANDS = {
     "help": show_help,
     "load": load(DATA_FILE)
+    "average": mean,
 }
 
 
