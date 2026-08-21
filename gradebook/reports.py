@@ -14,7 +14,7 @@ def mean(scores):
 def summary(roster):
     return f'''
     --=Student Report=--
-    Name:
+    Name: 
     Score:
     '''
 
