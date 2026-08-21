@@ -1,7 +1,7 @@
 """Loading and saving roster data. Owner: B."""
 
 import json
-import errors as e
+import gradebook.errors as e
 
 def load(path):
     """Load roster data from file."""
