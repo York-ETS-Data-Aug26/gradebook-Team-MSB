@@ -10,7 +10,7 @@ def load(path):
             data = json.load(file)
             return data
     # These are treated differently because in the case that no one is on the team the roster would be empty
-    except FileNotFoundError:
+    except :
         return {}
     except:
         raise e.StorageError("Corrupt JSON file")
