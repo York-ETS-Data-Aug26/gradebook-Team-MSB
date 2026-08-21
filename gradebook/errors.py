@@ -16,3 +16,5 @@ class InvalidGrade(GradebookError):
 class StorageError(GradebookError):
     """StorageError"""
 
+class ReportError(GradebookError):
+    """ReportError"""
