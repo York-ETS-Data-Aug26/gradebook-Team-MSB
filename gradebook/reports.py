@@ -1,5 +1,5 @@
 """Statistics and formatted output. Owner: C."""
-from gradebook.errors import ReportError
+from gradebook.errors import RosterError
 
 
 

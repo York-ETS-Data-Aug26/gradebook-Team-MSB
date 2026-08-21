@@ -8,24 +8,41 @@ from gradebook.reports import mean
 from gradebook.reports import summary
 
 from gradebook.roster import  find_student
-#DATA_FILE = "roster.json"
+DATA_FILE = "roster.json"
 
 
 def show_help(roster, args):
     print("commands:", ", ".join(sorted(COMMANDS)))
-def student (roster, args):
+def top_student (roster, args):
     if not roster:
-      #  print ("no Students in roster")
+        print ("no Students in roster")
         return
     name = max(roster, key= lambda name:mean(roster[name]))
     max_avg = mean(roster[name])
-   # print(f"{name}: {max_avg}")
+    print(f"{name}: {max_avg}")
+
+
+def avg (roster, args):
+    if not args:
+        print ("USAGE: avg <name",file=sys.stderr)
+        return
+    scores = find_student(roster, args[0])
+    x = mean(scores)
+    print(f"{args[0]}: {x}")
+
+
+def find (roster, args):
+    if not args:
+        print ("USAGE: find <name",file=sys.stderr)
+        return
+    scores = find_student(roster, args[0])
+    print (args[0],scores)
 
 COMMANDS = {
     "help": show_help,
     "load": load,
-    "average": mean,
-    "find": find_student,
+    "average": avg,
+    "find": find,
      "top" : top_student
  }
 
