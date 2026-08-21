@@ -1,6 +1,6 @@
 """Student roster operations. Owner: A."""
 
-import errors as e
+import gradebook.errors as e
 
 def find_student (roster,name):
     try:
