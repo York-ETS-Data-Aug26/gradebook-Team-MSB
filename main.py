@@ -21,10 +21,16 @@ def student (roster, args):
     max_avg = mean(roster[name])
    # print(f"{name}: {max_avg}")
 
+def average_command(roster, args):
+    name = args[0]
+    scores = roster[name]
+    print(mean(scores))
+
+
 COMMANDS = {
     "help": show_help,
     "load": load,
-    "average": mean,
+    "average": average_command,
     "find": find_student,
      "top" : top_student
  }
