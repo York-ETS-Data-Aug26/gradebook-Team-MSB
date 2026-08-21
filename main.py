@@ -1,7 +1,7 @@
 """Gradebook command line interface."""
 import sys
 
-from gradebook.reports import average
+#from gradebook.reports import average
 from gradebook.errors import GradebookError
 from gradebook.storage import load
 from gradebook.reports import mean
@@ -17,8 +17,8 @@ def top_student (roster, args):
     if not roster:
         print ("no Students in roster")
         return
-    name = max(roster, key= lambda name:average(roster[name]))
-    max_avg = average(roster[name])
+    name = max(roster, key= lambda name:mean(roster[name]))
+    max_avg = mean(roster[name])
     print(f"{name}: {max_avg}")
 
 COMMANDS = {
