@@ -13,7 +13,7 @@ from gradebook.roster import  find_student
 
 def show_help(roster, args):
     print("commands:", ", ".join(sorted(COMMANDS)))
-def student (roster, args):
+def top_student (roster, args):
     if not roster:
       #  print ("no Students in roster")
         return
