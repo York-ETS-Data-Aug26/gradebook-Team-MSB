@@ -21,11 +21,18 @@ def top_student (roster, args):
     max_avg = mean(roster[name])
     print(f"{name}: {max_avg}")
 
+def find (roster, args):
+    if not args:
+        print ("USAGE: find <name",file=sys.stderr)
+        return
+    scores = find_student(roster, args[0])
+    print (args[0],scores)
+
 COMMANDS = {
     "help": show_help,
     "load": load,
     "average": mean,
-    "find": find_student,
+    "find": find,
      "top" : top_student
  }
 
