@@ -6,6 +6,7 @@ from gradebook.storage import load
 from gradebook.reports import mean
 from gradebook.reports import summary
 
+from gradebook.roster import  find_student
 DATA_FILE = "roster.json"
 
 
@@ -17,6 +18,7 @@ COMMANDS = {
     "help": show_help,
     "load": load(DATA_FILE),
     "average": mean,
+    "find": find_student(),
 }
 
 
