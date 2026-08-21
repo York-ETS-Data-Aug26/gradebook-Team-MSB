@@ -16,9 +16,9 @@ def show_help(roster, args):
 
 COMMANDS = {
     "help": show_help,
-    "load": load(DATA_FILE),
+    "load": load,
     "average": mean,
-    "find": find_student(),
+    "find": find_student,
 }
 
 
