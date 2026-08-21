@@ -8,16 +8,11 @@ DATA_FILE = "roster.json"
 
 def show_help(roster, args):
     print("commands:", ", ".join(sorted(COMMANDS)))
-def show_find (roster, args):
-    if not args:
-        print("find <name>", args[0])
-        return
-    scores = find_student(roster[args[0]])
-    print (args[0],scores)
+
 
 COMMANDS = {
     "help": show_help,
-    "find": show_find,
+    "find": find_student(),
 }
 
 
