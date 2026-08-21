@@ -2,8 +2,6 @@
 from gradebook.errors import ReportError
 
 
-def average(scores):
-    return sum(scores) / len(scores)
 
 def mean(scores):
     #We use an if statement becasue we know this is a bad/frequent condition that can happen. So we check for it directly.
