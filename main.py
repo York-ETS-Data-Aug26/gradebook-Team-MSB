@@ -5,6 +5,7 @@ import sys
 from gradebook.errors import GradebookError
 from gradebook.storage import load
 from gradebook.reports import mean
+from gradebook.storage import save
 from gradebook.reports import summary
 
 from gradebook.roster import  find_student
@@ -38,12 +39,22 @@ def find (roster, args):
     scores = find_student(roster, args[0])
     print (args[0],scores)
 
+def call_load(roster, args):
+    if not args:
+        print("USAGE: callLoad <name>",file=sys.stderr)
+        return
+    data = load(DATA_FILE)
+    # roster.update(data)
+    saved = save(DATA_FILE, data)
+    print(f"{data} Roster Populated")
+
+
 COMMANDS = {
     "help": show_help,
-    "load": load,
+    "load": call_load,
     "average": avg,
     "find": find,
-     "top" : top_student
+    "top" : top_student
  }
 
 
