@@ -5,7 +5,7 @@ import sys
 from gradebook.errors import GradebookError
 from gradebook.storage import load
 from gradebook.reports import mean
-from gradebook.reports import summary
+from reports import summary
 
 from gradebook.roster import  find_student
 DATA_FILE = "roster.json"
