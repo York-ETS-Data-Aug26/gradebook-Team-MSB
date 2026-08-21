@@ -15,7 +15,7 @@ def show_help(roster, args):
 
 COMMANDS = {
     "help": show_help,
-    "load": load(DATA_FILE)
+    "load": load(DATA_FILE),
     "average": mean,
 }
 
